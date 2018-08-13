@@ -1,17 +1,50 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="back">
+    <ion-title >Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="homeback">
+    <img src="assets/imgs/izone.png" width=100%>
+    <br>
+    <ion-list>
+    <ion-item *ngFor="let post of posts; let i = index" (click)="playvideo(i)">
+<!-- <video x-webkit-airplay="allow" allowfullscreen alt="Calvary Worship Center" -->
+    <!-- width=100% height="200px" [poster]="post.image" -->
+    <!-- [src]="post.url" -->
+    <!-- controls ></video> -->
+    </ion-item>
+  </ion-list>
+  <ion-list>
+      <ion-item *ngFor="let post of movies">
+  <video x-webkit-airplay="allow" allowfullscreen alt="Calvary Worship Center"
+      width=100% height="200px" [poster]="post.image"
+      [src]="post.url"
+      controls ></video>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item *ngFor="let post of enters">
+    <video x-webkit-airplay="allow" allowfullscreen alt="Calvary Worship Center"
+        width=100% height="200px" [poster]="post.image"
+        [src]="post.url"
+        controls ></video>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+          <ion-item *ngFor="let post of musics">
+      <video x-webkit-airplay="allow" allowfullscreen alt="Calvary Worship Center"
+          width=100% height="200px" [poster]="post.image"
+          [src]="post.url"
+          controls ></video>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item *ngFor="let post of kids">
+        <video x-webkit-airplay="allow" allowfullscreen alt="Calvary Worship Center"
+            width=100% height="200px" [poster]="post.image"
+            [src]="post.url"
+            controls ></video>
+            </ion-item>
+          </ion-list>
 </ion-content>
